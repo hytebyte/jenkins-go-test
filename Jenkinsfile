@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install Go') {
       steps {
-        tool(name: 'go', type: 'go-1.10')
+        tool(name: 'go-1.10', type: 'go')
       }
     }
     stage('Build') {
