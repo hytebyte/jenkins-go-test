@@ -13,6 +13,11 @@ go test -v 2>&1 | ~/go/bin/go-junit-report > report.xml'''
         junit 'report.xml'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'go build'
+      }
+    }
   }
   tools {
     go 'go-1.10'
