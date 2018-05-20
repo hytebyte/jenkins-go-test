@@ -1,10 +1,8 @@
 package main
 
-import "fmt"
-
 func factorial(n int) int {
 	if n < 0 {
-		panic(fmt.Sprintf("n = %d passed to factorial", n))
+		return 0
 	}
 	if n == 0 {
 		return 1
