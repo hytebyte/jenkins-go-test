@@ -9,7 +9,7 @@ pipeline {
     stage('Test') {
       steps {
         sh '''go get -u github.com/jstemmer/go-junit-report
-go test -v 2>&1 | $GOPATH/bin/go-junit-report > report.xml'''
+go test -v 2>&1 | ~/go/bin/go-junit-report > report.xml'''
         junit 'report.xml'
       }
     }
