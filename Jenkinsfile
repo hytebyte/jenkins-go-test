@@ -6,6 +6,13 @@ pipeline {
         sh 'go version'
       }
     }
+    stage('Script') {
+      when { changeset "script/**" }
+      steps {
+        sh '''cd script
+go run *.go'''
+      }
+    }
     stage('Test') {
       steps {
         sh '''go get -u github.com/jstemmer/go-junit-report
