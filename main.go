@@ -14,4 +14,5 @@ func main() {
 		}
 		fmt.Println("n! =", factorial(n))
 	}
+	fmt.Println("done!")
 }
